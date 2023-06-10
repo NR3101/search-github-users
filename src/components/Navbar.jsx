@@ -51,25 +51,13 @@ const Wrapper = styled.nav`
     object-fit: cover;
   }
   button {
-    background: var(--clr-green-dark);
+    background: transparent;
     border: transparent;
-    border-radius: 5px;
-    padding: 0.15rem 0.2rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
-    color: var(--clr-white);
+    color: var(--clr-grey-5);
     cursor: pointer;
-    transition: var(--transition);
-  }
-
-  button:hover {
-    transform: scale(110%);
-    background: var(--clr-red-dark);
-  }
-
-  @media screen and (min-width: 800px) button {
-    font-size: 0.8rem;
   }
 `;
 
