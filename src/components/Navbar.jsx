@@ -52,15 +52,16 @@ const Wrapper = styled.nav`
   }
   button {
     background: var(--clr-green-dark);
-    border: transparent;
+    color: var(--clr-white);
     border-radius: 5px;
-    transition: var(--transition);
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     text-transform: capitalize;
     box-sizing: border-box;
     letter-spacing: var(--spacing);
-    color: var(--clr-white);
     cursor: pointer;
+    border-color: transparent;
+    padding: 0.25rem 0.5rem;
+    transition: var(--transition);
   }
   button:hover {
     background: var(--clr-red-dark);
