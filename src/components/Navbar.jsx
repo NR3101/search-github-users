@@ -55,7 +55,7 @@ const Wrapper = styled.nav`
     border: transparent;
     border-radius: 5px;
     padding: 0.15rem 0.2rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
     color: var(--clr-white);
@@ -66,6 +66,10 @@ const Wrapper = styled.nav`
   button:hover {
     transform: scale(110%);
     background: var(--clr-red-dark);
+  }
+
+  @media screen and (min-width: 800px) button {
+    font-size: 0.8rem;
   }
 `;
 
