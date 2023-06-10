@@ -5,14 +5,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user, isLoading } =
     useAuth0();
-
   const isUser = isAuthenticated && user;
-
-  console.log({ isAuthenticated, user, isLoading });
 
   return (
     <Wrapper>
-      {isUser && user.picture && <img src={user.picture} alt="userImg" />}
+      {isUser && user.picture && <img src={user.picture} alt={user.name} />}
       {isUser && user.name && (
         <h4>
           Welcome, <strong>{user.name.toUpperCase()}</strong>
@@ -24,10 +21,10 @@ const Navbar = () => {
             logout({ returnTo: window.location.origin });
           }}
         >
-          Logout
+          logout
         </button>
       ) : (
-        <button onClick={loginWithRedirect}>Login</button>
+        <button onClick={loginWithRedirect}>login</button>
       )}
     </Wrapper>
   );
@@ -54,19 +51,21 @@ const Wrapper = styled.nav`
     object-fit: cover;
   }
   button {
+    background: var(--clr-green-dark);
+    border: transparent;
     border-radius: 5px;
-    border-color: transparent;
-    padding: 0.25rem 0.5rem;
+    padding: 0.15rem 0.2rem;
+    font-size: 1rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
-    background: var(--clr-green-dark);
     color: var(--clr-white);
-    transition: var(--transition);
     cursor: pointer;
+    transition: var(--transition);
   }
+
   button:hover {
-    background: var(--clr-red-dark);
     transform: scale(110%);
+    background: var(--clr-red-dark);
   }
 `;
 
