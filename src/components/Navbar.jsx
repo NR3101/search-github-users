@@ -51,13 +51,20 @@ const Wrapper = styled.nav`
     object-fit: cover;
   }
   button {
-    background: transparent;
+    background: var(--clr-green-dark);
     border: transparent;
+    border-radius: 5px;
+    transition: var(--transition);
     font-size: 1.2rem;
     text-transform: capitalize;
+    box-sizing: border-box;
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-5);
+    color: var(--clr-white);
     cursor: pointer;
+  }
+  button:hover {
+    background: var(--clr-red-dark);
+    transform: scale(110%);
   }
 `;
 
